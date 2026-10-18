@@ -94,17 +94,21 @@ Dans un marché e-commerce en constante évolution, il est essentiel de comprend
 ### Étapes d'Installation
 - cd chemin/vers/projet-ecommerce
 - pip install -r requirements.txt
-- streamlit run app.py
+- `streamlit run app.py`
 - http://localhost:8501
 
+---
 
+## Structure du dépôt
 
+```
+app.py                 dashboard Streamlit
+scraping.py            module de scraping (importé par app.py)
+notebooks/
+  01_scraping_project.ipynb   collecte des données
+  02_data_processing.ipynb    nettoyage après scraping
+docs/robots/           fichiers robots.txt des sites ciblés (respect des règles de crawl)
+requirements.txt
+```
 
-
-
-
-
-
-
-
-
+**Lancer le dashboard :** `pip install -r requirements.txt` puis `streamlit run app.py`
